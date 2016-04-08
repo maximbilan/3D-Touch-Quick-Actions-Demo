@@ -11,6 +11,22 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+	enum ShortcutIdentifier: String {
+		case Share
+		case Add
+		case Dynamic
+		
+		init?(fullType: String) {
+			guard let last = fullType.componentsSeparatedByString(".").last else { return nil }
+			
+			self.init(rawValue: last)
+		}
+		
+		var type: String {
+			return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+		}
+	}
+	
 	var window: UIWindow?
 
 
