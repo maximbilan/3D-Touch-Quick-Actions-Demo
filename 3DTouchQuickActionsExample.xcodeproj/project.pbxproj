@@ -12,6 +12,7 @@
 		6D1930AA1CB6AAA600966707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1930A81CB6AAA600966707 /* Main.storyboard */; };
 		6D1930AC1CB6AAA600966707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1930AB1CB6AAA600966707 /* Assets.xcassets */; };
 		6D1930AF1CB6AAA600966707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1930AD1CB6AAA600966707 /* LaunchScreen.storyboard */; };
+		94280F2C1CB8099800516A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94280F2E1CB8099800516A5F /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		6D1930AB1CB6AAA600966707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D1930AE1CB6AAA600966707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D1930B01CB6AAA600966707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94280F2D1CB8099800516A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94280F2F1CB8099A00516A5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				6D1930AB1CB6AAA600966707 /* Assets.xcassets */,
 				6D1930AD1CB6AAA600966707 /* LaunchScreen.storyboard */,
 				6D1930B01CB6AAA600966707 /* Info.plist */,
+				94280F2E1CB8099800516A5F /* InfoPlist.strings */,
 			);
 			path = 3DTouchQuickActionsExample;
 			sourceTree = "<group>";
@@ -123,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1930AF1CB6AAA600966707 /* LaunchScreen.storyboard in Resources */,
+				94280F2C1CB8099800516A5F /* InfoPlist.strings in Resources */,
 				6D1930AC1CB6AAA600966707 /* Assets.xcassets in Resources */,
 				6D1930AA1CB6AAA600966707 /* Main.storyboard in Resources */,
 			);
@@ -157,6 +162,15 @@
 				6D1930AE1CB6AAA600966707 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		94280F2E1CB8099800516A5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94280F2D1CB8099800516A5F /* Base */,
+				94280F2F1CB8099A00516A5F /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,6 +302,7 @@
 				6D1930B51CB6AAA600966707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  3DTouchQuickActionsExample
+
+  Created by Maxim on 4/8/16.
+  Copyright © 2016 Maxim Bilan. All rights reserved.
+*/
+
+"SHORTCUT_TITLE_SHARE" = "Share";
+"SHORTCUT_TITLE_ADD" = "Add";
