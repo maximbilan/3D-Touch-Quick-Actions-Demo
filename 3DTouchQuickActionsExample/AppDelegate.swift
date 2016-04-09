@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	enum ShortcutIdentifier: String {
 		case Share
 		case Add
-		case Dynamic
 		
 		init?(fullType: String) {
 			guard let last = fullType.componentsSeparatedByString(".").last else { return nil }
@@ -47,10 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			break
 		case ShortcutIdentifier.Add.type:
 			// Handle shortcut 2 (static).
-			handled = true
-			break
-		case ShortcutIdentifier.Dynamic.type:
-			// Handle shortcut 3 (dynamic).
 			handled = true
 			break
 		default:
