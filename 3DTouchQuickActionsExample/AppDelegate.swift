@@ -29,10 +29,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	var window: UIWindow?
 
-
+	/// Saved shortcut item used as a result of an app launch, used later when app is activated.
+	var launchedShortcutItem: UIApplicationShortcutItem?
+	
+	func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+		var handled = false
+		
+		// Verify that the provided `shortcutItem`'s `type` is one handled by the application.
+		guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else { return false }
+		
+		guard let shortCutType = shortcutItem.type as String? else { return false }
+		
+		switch (shortCutType) {
+		case ShortcutIdentifier.Share.type:
+			// Handle shortcut 1 (static).
+			handled = true
+			break
+		case ShortcutIdentifier.Add.type:
+			// Handle shortcut 2 (static).
+			handled = true
+			break
+		case ShortcutIdentifier.Dynamic.type:
+			// Handle shortcut 3 (dynamic).
+			handled = true
+			break
+		default:
+			break
+		}
+		
+		// Construct an alert using the details of the shortcut used to open the application.
+		let alertController = UIAlertController(title: "Shortcut Handled", message: "\"\(shortcutItem.localizedTitle)\"", preferredStyle: .Alert)
+		let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+		alertController.addAction(okAction)
+		
+		// Display an alert indicating the shortcut selected from the home screen.
+		window!.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+		
+		return handled
+	}
+	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		
 		// Override point for customization after application launch.
-		return true
+		var shouldPerformAdditionalDelegateHandling = true
+		
+		// If a shortcut was launched, display its information and take the appropriate action
+		if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
+			
+			launchedShortcutItem = shortcutItem
+			
+			// This will block "performActionForShortcutItem:completionHandler" from being called.
+			shouldPerformAdditionalDelegateHandling = false
+		}
+		
+		return shouldPerformAdditionalDelegateHandling
 	}
 
 	func applicationWillResignActive(application: UIApplication) {
@@ -50,13 +100,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationDidBecomeActive(application: UIApplication) {
-		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+		guard let shortcut = launchedShortcutItem else { return }
+		handleShortCutItem(shortcut)
+		launchedShortcutItem = nil
 	}
 
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+	func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
+		let handledShortCutItem = handleShortCutItem(shortcutItem)
+		completionHandler(handledShortCutItem)
+	}
 
 }
 
