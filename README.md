@@ -128,7 +128,7 @@ enum ShortcutIdentifier: String {
 }
 </pre>
 
-And method for handling UIApplicationShortcutItem. For example:
+And method for handling <i><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/">UIApplicationShortcutItem</a></i>. For example:
 
 <pre>
 func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
@@ -160,7 +160,7 @@ switch (shortCutType) {
 }
 </pre>
 
-And finally we need call this method in the next AppDelegate situations:
+And finally we need call this method in the next <i>AppDelegate</i> situations:
 
 <pre>
 func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
@@ -169,7 +169,7 @@ func application(application: UIApplication, performActionForShortcutItem shortc
 }
 </pre>
 
-And in applicationDidBecomeActive:
+And in <i>applicationDidBecomeActive</i>:
 
 <pre>
 func applicationDidBecomeActive(application: UIApplication) {
@@ -179,8 +179,6 @@ func applicationDidBecomeActive(application: UIApplication) {
 }
 </pre>
 
-That’s all. How to work with dynamic items, you can see in official Apple example, there is not present any difficulties. The full source code of this example you can download from GitHub.
+That’s all. How to work with dynamic items, you can see in official <i>Apple</i> example, there is not present any difficulties.
 
-Happy coding!
-
-NOTE: If you don’t have real iPhone 6 or iPhone 6 Plus, you can test on simulator with helping this.
+<b>NOTE:</b> If you don’t have real iPhone 6 or iPhone 6 Plus, you can test on simulator with helping this.
