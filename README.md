@@ -181,4 +181,4 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 That’s all. How to work with dynamic items, you can see in official <i>Apple</i> example, there is not present any difficulties.
 
-<b>NOTE:</b> If you don’t have real iPhone 6 or iPhone 6 Plus, you can test on simulator with helping this.
+<b>NOTE:</b> If you don’t have real iPhone 6 or iPhone 6 Plus, you can test on simulator with helping <a href="https://github.com/DeskConnect/SBShortcutMenuSimulator">this</a>.
