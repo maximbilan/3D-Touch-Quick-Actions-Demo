@@ -77,7 +77,34 @@ enum UIApplicationShortcutIconType : Int {
 <b>UIApplicationShortcutItemUserInfo</b>: an optional dictionary of additional user information.
 Let’s try. Please add the next data to <i>Info.plist</i>:
 
+<pre>
+<key>UIApplicationShortcutItems</key>
+<array>
+  <dict>
+    <key>UIApplicationShortcutItemIconType</key>
+    <string>UIApplicationShortcutIconTypeShare</string>
+    <key>UIApplicationShortcutItemTitle</key>
+    <string>SHORTCUT_TITLE_SHARE</string>
+    <key>UIApplicationShortcutItemType</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER).Share</string>
+  </dict>
+  <dict>
+    <key>UIApplicationShortcutItemIconType</key>
+    <string>UIApplicationShortcutIconTypeAdd</string>
+    <key>UIApplicationShortcutItemTitle</key>
+    <string>SHORTCUT_TITLE_ADD</string>
+    <key>UIApplicationShortcutItemType</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER).Add</string>
+  </dict>
+</array>
+</pre>
+
 Also create <i>InfoPlist.strings</i>:
+
+<pre>
+"SHORTCUT_TITLE_SEARCH" = "Search";
+"SHORTCUT_TITLE_FAVORITES" = "Favorites";
+</pre>
 
 And what we got:
 
@@ -85,12 +112,75 @@ And what we got:
 
 Let’s implement handling of shortcuts. We need to create the next enumeration:
 
+<pre>
+enum ShortcutIdentifier: String {
+  case Share
+  case Add
+ 
+  init?(fullType: String) {
+    guard let last = fullType.componentsSeparatedByString(".").last else { return nil }
+    self.init(rawValue: last)
+  }
+  
+  var type: String {
+    return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+  }
+}
+</pre>
+
 And method for handling UIApplicationShortcutItem. For example:
+
+<pre>
+func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+  var handled = false
+  
+  // Verify that the provided `shortcutItem`'s `type` is one handled by the application.
+  guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else { return false }
+  guard let shortCutType = shortcutItem.type as String? else { return false }
+switch (shortCutType) {
+    case ShortcutIdentifier.Share.type:
+      // Handle shortcut 1 (static).
+      handled = true
+    break
+    case ShortcutIdentifier.Add.type:
+      // Handle shortcut 2 (static).
+      handled = true
+    break
+    default:
+    break
+  }
+// Construct an alert using the details of the shortcut used to open the application.
+  let alertController = UIAlertController(title: "Shortcut Handled", message: "\"\(shortcutItem.localizedTitle)\"", preferredStyle: .Alert)
+  let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+  alertController.addAction(okAction)
+  // Display an alert indicating the shortcut selected from the home screen.
+  window!.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+ 
+  return handled
+}
+</pre>
 
 And finally we need call this method in the next AppDelegate situations:
 
+<pre>
+func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
+  let handledShortCutItem = handleShortCutItem(shortcutItem)
+  completionHandler(handledShortCutItem)
+}
+</pre>
+
 And in applicationDidBecomeActive:
 
+<pre>
+func applicationDidBecomeActive(application: UIApplication) {
+  guard let shortcut = launchedShortcutItem else { return }
+  handleShortCutItem(shortcut)
+  launchedShortcutItem = nil
+}
+</pre>
+
 That’s all. How to work with dynamic items, you can see in official Apple example, there is not present any difficulties. The full source code of this example you can download from GitHub.
+
 Happy coding!
+
 NOTE: If you don’t have real iPhone 6 or iPhone 6 Plus, you can test on simulator with helping this.
