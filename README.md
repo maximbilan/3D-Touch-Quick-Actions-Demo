@@ -28,17 +28,21 @@ I would like to tell about <i>Quick Actions</i>, how to implement in application
 
 First of all, we need to add <b>UIApplicationShortcutItems</b> to <b>Info.plist</b>. Each child item should be a dictionary and must have at least these required keys:
 
-UIApplicationShortcutItemType: a string which is sent to your application as a part of UIApplicationShortcutItem. It can be used in code to handle actions for different shortcut types.
-UIApplicationShortcutItemTitle: a title of your action. Can be localized.
+<b>UIApplicationShortcutItemType</b>: a string which is sent to your application as a part of <i><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/">UIApplicationShortcutItem</a></i>. It can be used in code to handle actions for different shortcut types.
+
+<b>UIApplicationShortcutItemTitle</b>: a title of your action. Can be localized.
+
 And there are optional keys:
-UIApplicationShortcutItemSubtitle: a subtitle of your action. Also can be localized.
-UIApplicationShortcutItemIconType: an optional string which defines built-in icon type:
 
-UIApplicationShortcutItemIconFile: an optional string specifying an image from Assets Catalog or from the Bundle.
-UIApplicationShortcutItemUserInfo: an optional dictionary of additional user information.
-Let’s try. Please add the next data to Info.plist:
+<b>UIApplicationShortcutItemSubtitle</b>: a subtitle of your action. Also can be localized.
 
-Also create InfoPlist.strings:
+<b>UIApplicationShortcutItemIconType</b>: an optional string which defines built-in icon type:
+
+<b>UIApplicationShortcutItemIconFile</b>: an optional string specifying an image from <i>Assets Catalog</i> or from the <i>Bundle</i>.
+<b>UIApplicationShortcutItemUserInfo</b>: an optional dictionary of additional user information.
+Let’s try. Please add the next data to <i>Info.plist</i>:
+
+Also create <i>InfoPlist.strings</i>:
 
 And what we got:
 
