@@ -5,23 +5,29 @@ Recently <i>Apple</i> has provided new technology <i>3D Touch</i> for <i>iPhone 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
 <h3>Quick Actions</h3>
+
 Quick Actions let users do the things they do most often, faster and in fewer steps. Many of these actions can even be done with a single press, right from the Home screen.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/2.png)
 
-<h4>Peek and Pop</h4>
+<h3>Peek and Pop</h3>
+
 Let your users preview all kinds of content and even act on it — without having to actually open it. Users can then press a little deeper to Pop into content in your app.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/3.png)
 
-Pressure Sensitivity
+<h3>Pressure Sensitivity</h3>
+
 Creative apps can take advantage of the pressure-sensing display of iPhone 6 sand iPhone 6s Plus in many ways. For example, they can vary line thickness or give a brush a changing style.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/4.png)
 
-More information you can of course found on Apple website. Guides, tutorials, examples, etc.
+More information you can of course found on <i>Apple <a href="https://developer.apple.com/ios/3d-touch/">website</a></i>. Guides, tutorials, examples, etc.
+
 I would like to tell about <i>Quick Actions</i>, how to implement in application. Actions can be static or dynamic. Let’s start.
-First of all, we need to add UIApplicationShortcutItems to Info.plist. Each child item should be a dictionary and must have at least these required keys:
+
+First of all, we need to add <b>UIApplicationShortcutItems</b> to <b>Info.plist</b>. Each child item should be a dictionary and must have at least these required keys:
+
 UIApplicationShortcutItemType: a string which is sent to your application as a part of UIApplicationShortcutItem. It can be used in code to handle actions for different shortcut types.
 UIApplicationShortcutItemTitle: a title of your action. Can be localized.
 And there are optional keys:
