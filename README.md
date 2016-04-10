@@ -4,12 +4,12 @@ Recently <i>Apple</i> has provided new technology <i>3D Touch</i> for <i>iPhone 
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
-Quick Actions
+<h3>Quick Actions</h3>
 Quick Actions let users do the things they do most often, faster and in fewer steps. Many of these actions can even be done with a single press, right from the Home screen.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/2.png)
 
-Peek and Pop
+<h4>Peek and Pop</h4>
 Let your users preview all kinds of content and even act on it — without having to actually open it. Users can then press a little deeper to Pop into content in your app.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/3.png)
