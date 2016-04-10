@@ -1,6 +1,6 @@
 # iOS 3D Touch: How to add quick actions
 
-Recently Apple has provided new technology 3D Touch for iPhone 6S and 6S Plus. Which contains 3 new features for your applications.
+Recently <i>Apple</i> has provided new technology <i>3D Touch</i> for <i>iPhone 6S</i> and <i>6S Plus</i>. Which contains 3 new features for your applications.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
@@ -20,7 +20,7 @@ Creative apps can take advantage of the pressure-sensing display of iPhone 6 san
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/4.png)
 
 More information you can of course found on Apple website. Guides, tutorials, examples, etc.
-I would like to tell about Quick Actions, how to implement in application. Actions can be static or dynamic. Let’s start.
+I would like to tell about <i>Quick Actions</i>, how to implement in application. Actions can be static or dynamic. Let’s start.
 First of all, we need to add UIApplicationShortcutItems to Info.plist. Each child item should be a dictionary and must have at least these required keys:
 UIApplicationShortcutItemType: a string which is sent to your application as a part of UIApplicationShortcutItem. It can be used in code to handle actions for different shortcut types.
 UIApplicationShortcutItemTitle: a title of your action. Can be localized.
