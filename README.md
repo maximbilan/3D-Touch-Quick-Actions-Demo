@@ -2,22 +2,22 @@
 
 Recently Apple has provided new technology 3D Touch for iPhone 6S and 6S Plus. Which contains 3 new features for your applications.
 
-![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/img1.png)
+![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
 Quick Actions
 Quick Actions let users do the things they do most often, faster and in fewer steps. Many of these actions can even be done with a single press, right from the Home screen.
 
-![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/img2.png)
+![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/2.png)
 
 Peek and Pop
 Let your users preview all kinds of content and even act on it — without having to actually open it. Users can then press a little deeper to Pop into content in your app.
 
-![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/img3.png)
+![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/3.png)
 
 Pressure Sensitivity
 Creative apps can take advantage of the pressure-sensing display of iPhone 6 sand iPhone 6s Plus in many ways. For example, they can vary line thickness or give a brush a changing style.
 
-![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/img4.png)
+![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/4.png)
 
 More information you can of course found on Apple website. Guides, tutorials, examples, etc.
 I would like to tell about Quick Actions, how to implement in application. Actions can be static or dynamic. Let’s start.
@@ -36,7 +36,7 @@ Also create InfoPlist.strings:
 
 And what we got:
 
-![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/img5.png)
+![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/5.png)
 
 Let’s implement handling of shortcuts. We need to create the next enumeration:
 
