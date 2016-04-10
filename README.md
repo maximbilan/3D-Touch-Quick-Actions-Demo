@@ -38,7 +38,42 @@ And there are optional keys:
 
 <b>UIApplicationShortcutItemIconType</b>: an optional string which defines built-in icon type:
 
+<pre>
+enum UIApplicationShortcutIconType : Int {
+  case Compose
+  case Play
+  case Pause
+  case Add
+  case Location
+  case Search
+  case Share
+  case Prohibit
+  case Contact
+  case Home
+  case MarkLocation
+  case Favorite
+  case Love
+  case Cloud
+  case Invitation
+  case Confirmation
+  case Mail
+  case Message
+  case Date
+  case Time
+  case CapturePhoto
+  case CaptureVideo
+  case Task
+  case TaskCompleted
+  case Alarm
+  case Bookmark
+  case Shuffle
+  case Audio
+  case Update
+}
+</pre>
+
 <b>UIApplicationShortcutItemIconFile</b>: an optional string specifying an image from <i>Assets Catalog</i> or from the <i>Bundle</i>.
+
 <b>UIApplicationShortcutItemUserInfo</b>: an optional dictionary of additional user information.
 Let’s try. Please add the next data to <i>Info.plist</i>:
 
