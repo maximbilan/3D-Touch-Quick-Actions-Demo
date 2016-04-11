@@ -89,12 +89,12 @@ Let’s try. Please add the next data to <i>Info.plist</i>:
     &#60;string&#62;$(PRODUCT_BUNDLE_IDENTIFIER).Share&#60;/string&#62;
   &#60;/dict&#62;
   &#60;dict&#62;
-    <key>UIApplicationShortcutItemIconType</key>
-    <string>UIApplicationShortcutIconTypeAdd</string>
-    <key>UIApplicationShortcutItemTitle</key>
-    <string>SHORTCUT_TITLE_ADD</string>
-    <key>UIApplicationShortcutItemType</key>
-    <string>$(PRODUCT_BUNDLE_IDENTIFIER).Add</string>
+    &#60;key&#62;UIApplicationShortcutItemIconType&#60;/key&#62;
+    &#60;string&#62;UIApplicationShortcutIconTypeAdd&#60;/string&#62;
+    &#60;key&#62;UIApplicationShortcutItemTitle&#60;/key&#62;
+    &#60;string&#62;SHORTCUT_TITLE_ADD&#60;/string&#62;
+    &#60;key&#62;UIApplicationShortcutItemType&#60;/key&#62;
+    &#60;string&#62;$(PRODUCT_BUNDLE_IDENTIFIER).Add&#60;/string&#62;
   &#60;/dict&#62;
 &#60;/array&#62;
 </pre>
