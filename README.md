@@ -78,7 +78,7 @@ enum UIApplicationShortcutIconType : Int {
 Let’s try. Please add the next data to <i>Info.plist</i>:
 
 <pre>
-<key>UIApplicationShortcutItems</key>
+&#60;key&#62;UIApplicationShortcutItems</key>
 <array>
   <dict>
     <key>UIApplicationShortcutItemIconType</key>
