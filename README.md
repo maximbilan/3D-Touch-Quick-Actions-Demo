@@ -79,24 +79,24 @@ Let’s try. Please add the next data to <i>Info.plist</i>:
 
 <pre>
 &#60;key&#62;UIApplicationShortcutItems&#60;/key&#62;
-<array>
-  <dict>
+&#60;array&#62;
+  &#60;dict&#62;
     <key>UIApplicationShortcutItemIconType</key>
     <string>UIApplicationShortcutIconTypeShare</string>
     <key>UIApplicationShortcutItemTitle</key>
     <string>SHORTCUT_TITLE_SHARE</string>
     <key>UIApplicationShortcutItemType</key>
     <string>$(PRODUCT_BUNDLE_IDENTIFIER).Share</string>
-  </dict>
-  <dict>
+  &#60;/dict&#62;
+  &#60;dict&#62;
     <key>UIApplicationShortcutItemIconType</key>
     <string>UIApplicationShortcutIconTypeAdd</string>
     <key>UIApplicationShortcutItemTitle</key>
     <string>SHORTCUT_TITLE_ADD</string>
     <key>UIApplicationShortcutItemType</key>
     <string>$(PRODUCT_BUNDLE_IDENTIFIER).Add</string>
-  </dict>
-</array>
+  &#60;/dict&#62;
+&#60;/array&#62;
 </pre>
 
 Also create <i>InfoPlist.strings</i>:
