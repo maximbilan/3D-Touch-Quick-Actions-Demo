@@ -18,7 +18,7 @@ Let your users preview all kinds of content and even act on it — without h
 
 <h3>Pressure Sensitivity</h3>
 
-Creative apps can take advantage of the pressure-sensing display of iPhone 6 sand iPhone 6s Plus in many ways. For example, they can vary line thickness or give a brush a changing style.
+Creative apps can take advantage of the pressure-sensing display of <i>iPhone 6</i> sand <i>iPhone 6s Plus</i> in many ways. For example, they can vary line thickness or give a brush a changing style.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/4.png)
 
