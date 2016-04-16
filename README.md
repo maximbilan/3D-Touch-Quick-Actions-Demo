@@ -4,19 +4,19 @@ Recently <i>Apple</i> has provided new technology <i>3D Touch</i> for <i>iPhone 
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
-<h3>Quick Actions</h3>
+<h4>Quick Actions</h4>
 
 Quick Actions let users do the things they do most often, faster and in fewer steps. Many of these actions can even be done with a single press, right from the Home screen.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/2.png)
 
-<h3>Peek and Pop</h3>
+<h4>Peek and Pop</h4>
 
 Let your users preview all kinds of content and even act on it — without having to actually open it. Users can then press a little deeper to Pop into content in your app.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/3.png)
 
-<h3>Pressure Sensitivity</h3>
+<h4>Pressure Sensitivity</h4>
 
 Creative apps can take advantage of the pressure-sensing display of <i>iPhone 6</i> sand <i>iPhone 6s Plus</i> in many ways. For example, they can vary line thickness or give a brush a changing style.
 
