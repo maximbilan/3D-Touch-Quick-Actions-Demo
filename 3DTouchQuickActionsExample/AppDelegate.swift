@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		case Add
 		
 		init?(fullType: String) {
-			guard let last = fullType.componentsSeparatedByString(".").last else { return nil }
+			guard let last = fullType.components(separatedBy: ".").last else { return nil }
 			
 			self.init(rawValue: last)
 		}
@@ -63,13 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return handled
 	}
 	
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 		
 		// Override point for customization after application launch.
 		var shouldPerformAdditionalDelegateHandling = true
 		
 		// If a shortcut was launched, display its information and take the appropriate action
-		if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
+		if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
 			
 			launchedShortcutItem = shortcutItem
 			
@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-	func application(_ application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
 		let handledShortCutItem = handleShortCutItem(shortcutItem: shortcutItem)
 		completionHandler(handledShortCutItem)
 	}
