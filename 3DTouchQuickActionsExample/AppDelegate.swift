@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 		
 		var type: String {
-			return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+			return Bundle.main.bundleIdentifier! + ".\(self.rawValue)"
 		}
 	}
 	
@@ -53,12 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 		
 		// Construct an alert using the details of the shortcut used to open the application.
-		let alertController = UIAlertController(title: "Shortcut Handled", message: "\"\(shortcutItem.localizedTitle)\"", preferredStyle: .Alert)
-		let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+		let alertController = UIAlertController(title: "Shortcut Handled", message: "\"\(shortcutItem.localizedTitle)\"", preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
 		alertController.addAction(okAction)
 		
 		// Display an alert indicating the shortcut selected from the home screen.
-		window!.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+		window!.rootViewController?.present(alertController, animated: true, completion: nil)
 		
 		return handled
 	}
@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(application: UIApplication) {
 		guard let shortcut = launchedShortcutItem else { return }
-		handleShortCutItem(shortcut)
+		handleShortCutItem(shortcutItem: shortcut)
 		launchedShortcutItem = nil
 	}
 
@@ -104,8 +104,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-	func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
-		let handledShortCutItem = handleShortCutItem(shortcutItem)
+	func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+		let handledShortCutItem = handleShortCutItem(shortcutItem: shortcutItem)
 		completionHandler(handledShortCutItem)
 	}
 
