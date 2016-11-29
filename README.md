@@ -22,7 +22,7 @@ Creative apps can take advantage of the pressure-sensing display of <i>iPhone 6<
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/4.png)
 
-More information you can of course found on <i>Apple</i> <a href="https://developer.apple.com/ios/3d-touch/">website</a>. Guides, tutorials, examples, etc.
+More information you can of course found on <i><a href="https://developer.apple.com/ios/3d-touch/">Apple</a></i>. Guides, tutorials, examples, etc.
 
 I would like to tell about <i>Quick Actions</i>, how to implement in application. Actions can be static or dynamic. Let’s start.
 
