@@ -38,7 +38,7 @@ And there are optional keys:
 
 <b>UIApplicationShortcutItemIconType</b>: an optional string which defines built-in icon type:
 
-<pre>
+```swift
 enum UIApplicationShortcutIconType : Int {
   case Compose
   case Play
@@ -70,7 +70,7 @@ enum UIApplicationShortcutIconType : Int {
   case Audio
   case Update
 }
-</pre>
+```
 
 <b>UIApplicationShortcutItemIconFile</b>: an optional string specifying an image from <i>Assets Catalog</i> or from the <i>Bundle</i>.
 
@@ -112,7 +112,7 @@ And what we got:
 
 Let’s implement handling of shortcuts. We need to create the next enumeration:
 
-<pre>
+```swift
 enum ShortcutIdentifier: String {
   case Share
   case Add
@@ -126,11 +126,11 @@ enum ShortcutIdentifier: String {
     return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
   }
 }
-</pre>
+```
 
 And method for handling <i><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/">UIApplicationShortcutItem</a></i>. For example:
 
-<pre>
+```swift
 func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
   var handled = false
   
@@ -158,26 +158,26 @@ switch (shortCutType) {
  
   return handled
 }
-</pre>
+```
 
 And finally we need call this method in the next <i>AppDelegate</i> situations:
 
-<pre>
+```swift
 func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: Bool -> Void) {
   let handledShortCutItem = handleShortCutItem(shortcutItem)
   completionHandler(handledShortCutItem)
 }
-</pre>
+```
 
 And in <i>applicationDidBecomeActive</i>:
 
-<pre>
+```swift
 func applicationDidBecomeActive(application: UIApplication) {
   guard let shortcut = launchedShortcutItem else { return }
   handleShortCutItem(shortcut)
   launchedShortcutItem = nil
 }
-</pre>
+```
 
 That’s all. How to work with dynamic items, you can check an official <i>Apple</i> example, there is not present any difficulties.
 
