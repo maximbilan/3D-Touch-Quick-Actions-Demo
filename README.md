@@ -150,10 +150,12 @@ func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
     default:
     break
   }
-// Construct an alert using the details of the shortcut used to open the application.
+
+  // Construct an alert using the details of the shortcut used to open the application.
   let alertController = UIAlertController(title: "Shortcut Handled", message: "\"\(shortcutItem.localizedTitle)\"", preferredStyle: .Alert)
   let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
   alertController.addAction(okAction)
+  
   // Display an alert indicating the shortcut selected from the home screen.
   window!.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
  
