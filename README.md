@@ -137,7 +137,8 @@ func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
   // Verify that the provided `shortcutItem`'s `type` is one handled by the application.
   guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else { return false }
   guard let shortCutType = shortcutItem.type as String? else { return false }
-switch (shortCutType) {
+
+  switch (shortCutType) {
     case ShortcutIdentifier.Share.type:
       // Handle shortcut 1 (static).
       handled = true
