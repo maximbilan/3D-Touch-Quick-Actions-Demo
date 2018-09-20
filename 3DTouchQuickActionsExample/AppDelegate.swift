@@ -63,13 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return handled
 	}
 	
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		
 		// Override point for customization after application launch.
 		var shouldPerformAdditionalDelegateHandling = true
 		
 		// If a shortcut was launched, display its information and take the appropriate action
-		if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+		if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
 			
 			launchedShortcutItem = shortcutItem
 			
