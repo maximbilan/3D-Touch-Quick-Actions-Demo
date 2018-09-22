@@ -1,6 +1,6 @@
 # iOS 3D Touch: How to add quick actions
 
-Recently <i>Apple</i> has provided new technology <i>3D Touch</i> for <i>iPhone 6S</i> and <i>6S Plus</i>. Which contains 3 new features for your applications.
+Recently <i>Apple</i> has provided a new technology <i>3D Touch</i> for <i>iPhone 6S</i> and <i>6S Plus</i>. Which contains 3 new features for your applications.
 
 ![alt tag](https://raw.github.com/maximbilan/3D-Touch-Quick-Actions-Demo/master/img/1.png)
 
@@ -128,7 +128,7 @@ enum ShortcutIdentifier: String {
 }
 ```
 
-And method for handling <i><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/">UIApplicationShortcutItem</a></i>. For example:
+And a method for handling <i><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/">UIApplicationShortcutItem</a></i>. For example:
 
 ```swift
 func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
@@ -184,4 +184,4 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 That’s all. How to work with dynamic items, you can check an official <i>Apple</i> example, there is not present any difficulties.
 
-<b>NOTE:</b> If you don’t have real <i>iPhone 6</i> or <i>iPhone 6 Plus</i>, you can test on simulator with helping <a href="https://github.com/DeskConnect/SBShortcutMenuSimulator">this</a>.
+<b>NOTE:</b> If you don’t have real <i>iPhone 6</i> or <i>iPhone 6 Plus</i>, you can test on a simulator with helping <a href="https://github.com/DeskConnect/SBShortcutMenuSimulator">this</a>.
